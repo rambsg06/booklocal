@@ -1,7 +1,83 @@
-<% provide(:title, 'Home') %>
-<h1>Sample App</h1>
-<p>
-  This is the home page for the
-  <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-  sample application.
-</p>
+<div class="content-holder cf">
+    <div class="flexslider">
+      <ul class="slides">
+        <li class="dark">
+        	<%= image_tag("test-slide-flyer-blue.jpg", :alt => "") %>
+          <div class="slide-text-holder left">
+            <h2 class="slide-heading">An unforgettable vocal experience in the heart of London</h2>
+            <p class="slide-caption">London A Cappella International Summer School launches at the 2013 London A Cappella Festival, 1 – 4 August 2014</p>
+            <a href="2013/01/23/london-a-cappella-international-summer-school-launches/index.html" class="slide-link">Find out more &#187;</a></div>
+        </li>
+        <li class="light"><%= image_tag("kings-place-slide1.jpg", :alt => "") %>
+          <div class="slide-text-holder right">
+            <h2 class="slide-heading">Course registration is now open!</h2>
+            <p class="slide-caption">For 1-4th August 2014</p>
+<%= link_to "Register here>>", '#', class: "slide-link" %>
+          </div>
+        </li>
+        <li class="light"><%= image_tag("twitter-slide_v1.jpg", :alt => "") %>
+          <div class="slide-text-holder right">
+            <h2 class="slide-heading">Find us on twitter @Londonacappella</h2>
+            <p class="slide-caption">#laciss2014</p>
+<%= link_to "Read more >>", '#', class: "slide-link" %>
+          </div>
+        </li>
+        <li class="light"><%= image_tag("test-slide.jpg", :alt => "") %>
+          <div class="slide-text-holder left">
+            <h2 class="slide-heading">Special announcement: The Swingle Singers join the summer school team!</h2>
+            <a href="2013/01/23/special-announcement-the-swingle-singers-join-the-summer-school-team/index.html" class="slide-link">Read more &#187;</a></div>
+        </li>
+      </ul>
+    </div>
+    <div class="search-area">
+
+    
+    <div class="container1">
+      <h1>Find a place to stay.</h1>
+      <h2>Rent from people in 37,249 cities and 192 countries.</h2>
+
+      <form class="custom show-search-options position-left" id="search_form" action="/s">
+        <div class="input-wrapper">
+          <input type="text" placeholder="Where do you want to go?" name="location" id="location" autocomplete="off" class="location">
+          <p style="display:none;" class="bad" id="enter_location_error_message">
+            Please set location
+          </p>
+        </div>
+        
+      
+
+       
+    
+        
+        <button id="submit_location" class="large pink btn icon-and-text position-left" type="button">
+          Search
+        </button>
+      </form>
+    </div>
+  </div>
+    <div class="homepage-modules cf">
+      <section class="module homepage-module">
+        <h2 class="module-heading">Welcome</h2>
+        <p>Welcome to the <strong>London A Cappella International Summer School</strong>, an intensive four-day course helping you to harness and refine your <em>a cappella</em> potential.</p>
+        <p>To find out more about the course, please <a title="The Course" href="http://dev.londonacappella.com/summerschool/course/">click here</a>, or to learn more about London A Cappella, the organisers of the summer school, please <a title="London A Cappella" href="../index.html">visit the main website</a>.</p>
+      </section>
+      <section class="module homepage-module second">
+        <h2 class="module-heading">The course</h2>
+        <p>Harness and refine your a cappella potential with our diverse programme of workshops and masterclasses, from some of the finest performers and educators in the industry, selected to challenge and advance every participant.</p>
+        <a href="course/index.html">More about the course &#187;</a> </section>
+      <span class="separator"></span>
+      <section class="module homepage-module">
+        <h2 class="module-heading">News</h2>
+        <h3><a href="2013/01/23/special-announcement-the-swingle-singers-join-the-summer-school-team/index.html">The Swingle Singers join summer school team</a></h3>
+        <h3><a href="2013/01/23/join-the-buzz/index.html">Join the buzz</a></h3>
+        <h3><a href="book/index.html">Course registration now open</a></h3>
+        <h3><a href="2013/01/23/london-a-cappella-international-summer-school-launches/index.html">Summer School launches at London A Cappella Festival 2013!</a></h3>
+        <a href="media/news/index.html">More news &#187;</a> </section>
+      <section class="module homepage-module fourth">
+        <h2 class="module-heading">Book</h2>
+        <p>Register soon to take advantage of the limited early bird offer!  Click &#8216;Register here&#8217; below for more details and to register your place.</p>
+        <a href="book/index.html" class="btn">Register here &#187;</a> </section>
+    </div>
+    <!-- end .homepage-modules --> 
+    
+  </div>

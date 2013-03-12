@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ruby on Rails Tutorial Sample App | <%= yield(:title) %></title>
-    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= stylesheet_link_tag    "main.22012013", media: "all" %>
     <%= javascript_include_tag "application" %>
+ <%= javascript_include_tag "modernizr-custom.min.22012013" %>
+<script>
+            var Site = {
+                basePath: ''
+            };
+        </script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
+   <%= javascript_include_tag "main.min.22012013" %>
+ <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+
+<%= javascript_include_tag "jquery.geocomplete" %>
+<%= javascript_include_tag "custom" %>
+
+
     <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>    
   </head>
-  <body>
-    <%= yield %>
+  <body class="homepage">
+
+<div class="wrapper">
+    <%= render 'layouts/header' %>
+   
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    <a href="#" class="mobile-overlay"></a> </div>
+
+
+<div class="overlay">
+  <div class="overlay-content-holder"> <a href="#" class="overlay-close-btn">X</a>
+    <div class="overlay-content"></div>
+  </div>
+</div>
   </body>
 </html>
